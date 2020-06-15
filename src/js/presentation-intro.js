@@ -1,9 +1,9 @@
 "use strict";
 
-const intro_header = document.querySelector("#introduction-header");
-const about_me = document.querySelector("#task-content");
-
 function presentation_item(control_key, undo_key, control_callback, undo_callback) {
+    const intro_header = document.querySelector("#introduction-header");
+    const about_me = document.querySelector("#task-content");
+
     document.addEventListener("keydown", event => {
         if(event.isComposing || event.keyCode === control_key) {
             control_callback(about_me, intro_header)
@@ -21,9 +21,10 @@ function hideAndShowItem(show_item_selector, hide_item_selector) {
 presentation_item(13, 32, hideAndShowItem,  hideAndShowItem)
 
 document.addEventListener("keydown", event => {
+    const goToFetchedSite = selector => window.location.href = document.querySelector(selector).getAttribute("href");
     if(event.isComposing || event.keyCode === 39) {
-        window.location.href = document.querySelector(".presentation-link-right").getAttribute("href");
+        goToFetchedSite(".presentation-link-right");
     } else if (event.isComposing || event.keyCode === 37) {
-        window.location.href = document.querySelector(".presentation-link-left").getAttribute("href");
+        goToFetchedSite(".presentation-link-left");
     }
 });
