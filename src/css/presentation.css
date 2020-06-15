@@ -1,0 +1,43 @@
+p {
+    font-size: 1.3rem;
+}
+
+ol > li,
+ul > li {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#presentation-content {
+    text-align: center;
+    background-color: rgba(205, 201, 201, 0.13);
+    overflow: hidden;
+    padding: 2rem 2rem;
+    margin: 3rem 6rem 2rem;
+    box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+#introduction-header {
+    margin-bottom: 1rem;
+}
+
+#presentations {
+    margin: 3rem 6rem 2rem;
+}
+
+#presentation-right-arrow {
+    float: right;
+    margin-right: 1.5rem;
+    color: black;
+}
+
+#presentation-left-arrow {
+    float: left;
+    margin-left: 1.5rem;
+    color: black;
+}
+
+#task-content {
+    display: none;
+    text-align: left;
+}
