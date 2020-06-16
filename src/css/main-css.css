@@ -17,7 +17,7 @@ body {
 
 #navigation-bar > a {
     text-decoration: none;
-    font-family: Arial;
+    font-family: Arial, serif;
     color: white;
     padding: 1.5rem;
 }
@@ -49,7 +49,9 @@ body {
 }
 
 .employee {
-    margin: 0rem 5rem 3rem 5rem;
+    margin: 0 5rem 3rem 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -74,7 +76,8 @@ body {
 .employee:hover {
     background-color: rgba(187, 180, 180, 0.13);
     box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.4);
-    padding: 1rem 2rem 2rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
