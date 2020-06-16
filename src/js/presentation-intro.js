@@ -3,9 +3,13 @@
 const keyPressed = (key, e) => {
     return e.isComposing || e.keyCode === key
 };
-function presentation_item(control_key, undo_key, control_callback, undo_callback) {
 
 const elementExist = element => {
+    return (document.querySelector(element) !== null);
+}
+
+// Apply and revert a callback function
+const presentation_item = (control_key, undo_key, control_callback, undo_callback) => {
     document.addEventListener("keydown", event => {
         keyPressed(control_key, event) ? control_callback(about_me, intro_header)
             : keyPressed(undo_key, event) ? undo_callback(intro_header, about_me)
@@ -13,15 +17,20 @@ const elementExist = element => {
     });
 
 }
-function hideAndShowItem(show_item_selector, hide_item_selector) {
+
+const hideAndShowItem = (show_item_selector, hide_item_selector) => {
     hide_item_selector.style.display = "none";
     show_item_selector.style.display = "block";
+}
 
 const intro_header = document.querySelector("#introduction-header");
+const about_me = document.querySelector("#task-content");
 
-presentation_item(13, 32, hideAndShowItem, hideAndShowItem)
 document.addEventListener("keydown", event => {
-    const goToFetchedSite = selector => window.location.href = document.querySelector(selector).getAttribute("href");
+    const goToFetchedSite = selector => {
+        elementExist(selector) ? window.location.href = document.querySelector(selector).getAttribute("href")
+            : false;
+    }
     keyPressed(39, event) ? goToFetchedSite(".presentation-link-right")
         : keyPressed(37, event) ? goToFetchedSite(".presentation-link-left")
         : false;
@@ -35,3 +44,5 @@ if (window.matchMedia("(max-width: 700px)").matches) {
     })
 
 }
+
+presentation_item(13, 32, hideAndShowItem, hideAndShowItem);
