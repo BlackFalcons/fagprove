@@ -37,12 +37,10 @@ document.addEventListener("keydown", event => {
 });
 
 // Add mobile support
-if (window.matchMedia("(max-width: 700px)").matches) {
-    const presentationContent = document.querySelector("#presentation-content");
-    presentationContent.addEventListener("click", event => {
-        getComputedStyle(intro_header).display === "block" ? hideAndShowItem(about_me, intro_header) : hideAndShowItem(intro_header, about_me);
-    })
+const presentationContent = document.querySelector("#presentation-content");
 
-}
+presentationContent.addEventListener("click", () => {
+    getComputedStyle(intro_header).display === "block" ? hideAndShowItem(about_me, intro_header) : hideAndShowItem(intro_header, about_me);
+})
 
 presentation_item(13, 32, hideAndShowItem, hideAndShowItem);

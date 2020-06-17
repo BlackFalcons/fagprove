@@ -40,7 +40,6 @@ body {
     font-style: italic;
 }
 
-/* TODO Fix that employee is spamming line change if hovering last element and element breaks to a new line */
 .emplyees {
     text-align: center;
     display: flex;
