@@ -2,7 +2,9 @@
 
 // Checks for a key press
 const keyPressed = (key, e) => {
-    e.preventDefault()
+    // Prevent space from scrolling down when clicked.
+    e.keyCode === 32 ? e.preventDefault() : false
+
     return e.isComposing || e.keyCode === key
 };
 
