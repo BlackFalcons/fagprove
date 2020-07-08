@@ -35,8 +35,8 @@ document.addEventListener("keydown", event => {
         elementExist(selector) ? window.location.href = document.querySelector(selector).getAttribute("href")
             : false;
     }
-    keyPressed(39, event) ? goToFetchedSite(".presentation-link-right")
-        : keyPressed(37, event) ? goToFetchedSite(".presentation-link-left")
+    keyPressed("ArrowRight", event) ? goToFetchedSite(".presentation-link-right")
+        : keyPressed("ArrowLeft", event) ? goToFetchedSite(".presentation-link-left")
         : false;
 });
 
