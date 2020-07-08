@@ -44,4 +44,4 @@ presentationContent.addEventListener("click", () => {
     getComputedStyle(intro_header).display === "block" ? hideAndShowItem(about_me, intro_header) : hideAndShowItem(intro_header, about_me);
 })
 
-presentation_item(13, 32, hideAndShowItem, hideAndShowItem);
+presentation_item(32, 13, hideAndShowItem, hideAndShowItem);
