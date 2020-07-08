@@ -3,9 +3,9 @@
 // Checks for a key press
 const keyPressed = (key, e) => {
     // Prevent space from scrolling down when clicked.
-    e.keyCode === 32 ? e.preventDefault() : false
+    e.code === "Space" ? e.preventDefault() : false
 
-    return e.isComposing || e.keyCode === key
+    return e.isComposing || e.code === key
 };
 
 const elementExist = element => {
@@ -47,4 +47,4 @@ presentationContent.addEventListener("click", () => {
     getComputedStyle(intro_header).display === "block" ? hideAndShowItem(about_me, intro_header) : hideAndShowItem(intro_header, about_me);
 })
 
-presentation_item(32, 13, hideAndShowItem, hideAndShowItem);
+presentation_item("Space", "Enter", hideAndShowItem, hideAndShowItem);
