@@ -1,4 +1,5 @@
 "use strict";
+
 // Checks for a key press
 const keyPressed = (key, e) => {
     return e.isComposing || e.keyCode === key
