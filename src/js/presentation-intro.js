@@ -2,6 +2,7 @@
 
 // Checks for a key press
 const keyPressed = (key, e) => {
+    e.preventDefault()
     return e.isComposing || e.keyCode === key
 };
 
